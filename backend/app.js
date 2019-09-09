@@ -10,12 +10,11 @@ const AdminRoute = require("./routes/admin")
 
 app.use(cors());
 
-mongoose.connect("mongodb://localhost:27017/property").then(() => {
-        console.log('Connected to database')
+mongoose.connect('mongodb+srv://farhod:7Q8SfcHx.F2J.HG@cluster0-uf7cc.mongodb.net/property?retryWrites=true', { useNewUrlParser: true })
+    .then(() => {
+        console.log('MongoDB connected.');
     })
-    .catch(() => {
-        console.log('Error in connected database')
-    });
+    .catch(err => console.log(err));
 
 module.exports = { mongoose };
 

@@ -1,11 +1,11 @@
 1. Region: { Moskow, Piter} // region
 2. Uy turi: {Kvartira, hovli} // house_type
-3. Holati: { Yevro, Oddiy} // appearance
+3. Holati: { Yevroremont, Oddiy} // appearance
 4. Narx tipi: { YEvro, rubl, sum } // currency
-5. Qulayliklar : { Mebel, Kondissioner} // Convenience
+5. Qulayliklar : { Mebel, Kondissioner} // convenience
 6. Bino materiali: {Panel, beton} // building_material
 7. User : {name, number,email,password,avatar}
-8. E'lon turi // announcement_type
+8. E'lon turi // announcement_type : { sotiladigan, ijaraga }
 9. E'lon // announcement : 
 {
   user_id : {id}
