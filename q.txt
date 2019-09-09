@@ -1,0 +1,30 @@
+1. Region: { Moskow, Piter} // region
+2. Uy turi: {Kvartira, hovli} // house_type
+3. Holati: { Yevro, Oddiy} // appearance
+4. Narx tipi: { YEvro, rubl, sum } // currency
+5. Qulayliklar : { Mebel, Kondissioner} // Convenience
+6. Bino materiali: {Panel, beton} // building_material
+7. User : {name, number,email,password,avatar}
+8. E'lon turi // announcement_type
+9. E'lon // announcement : 
+{
+  user_id : {id}
+  region_id: { SELECT }
+  galery: {Rasmlar}
+  classification // tasnif : { Text}
+  location: { TEXT }
+  rooms_number // Xonalar soni: { INPUT }
+  room_allocation // Xonalar ajratilganmi : { BOOLEAN }
+  floor // Qavat: { INPUT }
+  general_floor // Umumiy qavat: { INPUT }
+  area // Maydoni: {50 m.kv | INTEGAR}
+  live_area // Yashash maydoni: {60 m.kv | INTEGAR}
+  appearance // Holati : { appearance._id }
+  building_material // Bino materiali : { building_material._id }
+  summ // Narxi : { INTEGER },
+  currency // Narxi tipi: { SELECT },
+  one_m_kv // 1 m.kv uchun narx : { INTEGAR }
+  announcement_number // E'lon raqami : { id }
+  date // Sana : {New Data()}
+  announcement_type // E'lon turi : { announcement_type._id }
+}
