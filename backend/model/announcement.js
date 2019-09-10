@@ -22,4 +22,4 @@ const AnnouncementSchema = mongoose.Schema({
     date: { type: Date }
 });
 
-module.exports = AnnouncementSchema
+module.exports = mongoose.model('announcement', AnnouncementSchema)

@@ -4,4 +4,4 @@ const AnnouncementTypeSchema = mongoose.Schema({
     name: { type: String }
 });
 
-module.exports = AnnouncementTypeSchema
+module.exports = mongoose.model('announcement_type', AnnouncementTypeSchema)

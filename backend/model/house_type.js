@@ -4,4 +4,4 @@ const HouseTypeSchema = mongoose.Schema({
     name: { type: String }
 });
 
-module.exports = HouseTypeSchema
+module.exports = mongoose.model('house_type', HouseTypeSchema)

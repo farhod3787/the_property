@@ -4,4 +4,4 @@ const RegionSchema = mongoose.Schema({
     name: { type: String }
 });
 
-module.exports = RegionSchema
+module.exports = mongoose.model('region', RegionSchema)

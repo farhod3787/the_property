@@ -4,4 +4,4 @@ const CurrencySchema = mongoose.Schema({
     name: { type: String }
 });
 
-module.exports = CurrencySchema
+module.exports = mongoose.model('currency', CurrencySchema)

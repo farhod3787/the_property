@@ -4,4 +4,4 @@ const AppearanceSchema = mongoose.Schema({
     name: { type: String }
 });
 
-module.exports = AppearanceSchema
+module.exports = mongoose.model('appearance', AppearanceSchema)

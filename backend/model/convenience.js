@@ -4,4 +4,4 @@ const ConvenienceSchema = mongoose.Schema({
     name: { type: String }
 });
 
-module.exports = ConvenienceSchema
+module.exports = mongoose.model('convenience', ConvenienceSchema)

@@ -4,4 +4,4 @@ const BuildingMaterialSchema = mongoose.Schema({
     name: { type: String }
 });
 
-module.exports = BuildingMaterialSchema
+module.exports = mongoose.model('building_material', BuildingMaterialSchema)
