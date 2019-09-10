@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpModule } from '@angular/http'
 
 import {
   MatInputModule,
@@ -22,6 +23,7 @@ import { AdminNavbarComponent } from './admin/admin-navbar/admin-navbar.componen
 import { AdminFooterComponent } from './admin/admin-footer/admin-footer.component';
 import { AdminHomeListComponent } from './admin/admin-home-list/admin-home-list.component';
 import { AdminUserListComponent } from './admin/admin-user-list/admin-user-list.component';
+import { AdminInformationComponent } from './admin/admin-information/admin-information.component';
 
 
 @NgModule({
@@ -31,11 +33,13 @@ import { AdminUserListComponent } from './admin/admin-user-list/admin-user-list.
     AdminNavbarComponent,
     AdminFooterComponent,
     AdminHomeListComponent,
-    AdminUserListComponent
+    AdminUserListComponent,
+    AdminInformationComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpModule,
     BrowserAnimationsModule,
     MatInputModule,
     MatFormFieldModule,

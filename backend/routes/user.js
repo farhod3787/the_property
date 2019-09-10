@@ -42,7 +42,7 @@ router.post('/create', multer({ storage: storage }).single('avatar'), (req, res)
     let newUser = new User(body)
 
     newUser.save().then((result) => {
-        res.status(200).json()
+        res.status(200).json({message: "New User Created"})
     }).catch(e => {
         console.log(e);
         res.status(400).json()
@@ -51,7 +51,8 @@ router.post('/create', multer({ storage: storage }).single('avatar'), (req, res)
 
 router.get('/', (req, res) => {
     User.find().then((result) => {
-        res.status(200).json({ users: result })
+        res.status(200).json(result)
+        // res.status(200).json({ users: result })
     }).catch(e => {
         console.log(e);
         res.status(400).json()

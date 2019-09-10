@@ -75,15 +75,15 @@
                             </ng-container>
         
                             <!-- Progress Column -->
-                            <ng-container matColumnDef="logo">
-                                <th mat-header-cell *matHeaderCellDef mat-sort-header> <b>Avatar : </b> </th>
-                                <td mat-cell *matCellDef="let row"><img src="{{row.logo}}" width="80" alt=""> </td>
+                            <ng-container matColumnDef="name">
+                                <th mat-header-cell *matHeaderCellDef mat-sort-header> <b>User Name : </b> </th>
+                                <td mat-cell *matCellDef="let row">{{row.name}}</td>
                             </ng-container>
         
                             <!-- Name Column -->
-                            <ng-container matColumnDef="user_name">
-                                <th mat-header-cell *matHeaderCellDef mat-sort-header> <b> User Name : </b></th>
-                                <td mat-cell *matCellDef="let row"> {{row.user_name}}                      
+                            <ng-container matColumnDef="email">
+                                <th mat-header-cell *matHeaderCellDef mat-sort-header> <b> Email : </b></th>
+                                <td mat-cell *matCellDef="let row"> {{row.email}}                      
                                 </td>
                             </ng-container>
         
@@ -94,15 +94,15 @@
                             </ng-container>
                             <!-- "./node_modules/chart.js/dist/Chart.js", -->
         
-                            <ng-container matColumnDef="email">
-                                <th mat-header-cell *matHeaderCellDef mat-sort-header><b>Email : </b></th>
-                                <td mat-cell *matCellDef="let row"> {{row.email}} </td>
+                            <ng-container matColumnDef="avatar">
+                                <th mat-header-cell *matHeaderCellDef mat-sort-header><b>Avatar : </b></th>
+                                <td mat-cell *matCellDef="let row"> {{row.avatar}} </td>
                             </ng-container>
         
                             <ng-container matColumnDef="delete">
                                 <th mat-header-cell *matHeaderCellDef mat-sort-header> <b> Delete : </b> </th>
                                 <td mat-cell *matCellDef="let row"> 
-                                        <button mat-button>Delete</button>
+                                        <button mat-button (click)="delete(row._id)">Delete</button>
                                 </td>
                             </ng-container>
         
