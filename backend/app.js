@@ -15,6 +15,7 @@ const CurrencyRoute = require("./routes/currency")
 const HouseTypeRoute = require("./routes/house_type")
 const RegionRoute = require("./routes/region")
 const UserRoute = require("./routes/user")
+const AnnouncementRoute = require("./routes/announcement")
 
 app.use(cors());
 
@@ -47,6 +48,7 @@ app.use('/api/currency', CurrencyRoute)
 app.use('/api/house_type', HouseTypeRoute)
 app.use('/api/region', RegionRoute)
 app.use('/api/user', UserRoute)
+app.use('/api/announcement', AnnouncementRoute)
 
 
 module.exports = app;
