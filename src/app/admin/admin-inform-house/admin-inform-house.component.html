@@ -1,0 +1,146 @@
+<div class="page">
+        <header class="header p-0" style="position: relative;">
+            <nav class="navbar">
+                <div class="container-fluid">
+                    <div class="navbar-holder d-flex align-items-center justify-content-between">
+                        <div class="navbar-header">
+                            <a id="toggle-btn" href="#" class="menu-btn">
+                                <i class="fa fa-bars "> </i></a><a href="index.html" class="navbar-brand">
+                                <div class="brand-text d-none d-md-inline-block"><span>Inform</span><strong
+                                        class="text-primary">List</strong></div>
+                            </a></div>
+                        <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
+                            <!-- Notifications dropdown-->
+                            <li class="nav-item dropdown"> <a id="notifications" rel="nofollow" data-target="#" href="#"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link"><i
+                                        class="fa fa-bell"></i><span class="badge badge-warning">12</span></a>
+                                <ul aria-labelledby="notifications" class="dropdown-menu">
+                                    <li><a rel="nofollow" href="#" class="dropdown-item">
+                                            <div class="notification d-flex justify-content-between">
+                                                <div class="notification-content"><i class="fa fa-envelope"></i>You have 6
+                                                    new messages </div>
+                                                <div class="notification-time"><small>4 minutes ago</small></div>
+                                            </div>
+                                        </a></li>
+                                </ul>
+                            </li>
+                            <!-- Languages dropdown    -->
+                            <li class="nav-item dropdown"><a id="languages" rel="nofollow" data-target="#" href="#"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                    class="nav-link language dropdown-toggle">
+                                    <img src="assets/admin/img/flags/16/GB.png" alt="English"><span
+                                        class="d-none d-sm-inline-block">English</span></a>
+                                <ul aria-labelledby="languages" class="dropdown-menu">
+                                    <li><a rel="nofollow" href="#" class="dropdown-item"> <img
+                                                src="assets/admin/img/flags/16/DE.png" alt="English"
+                                                class="mr-2"><span>German</span></a></li>
+                                    <li><a rel="nofollow" href="#" class="dropdown-item"> <img
+                                                src="assets/admin/img/flags/16/FR.png" alt="English"
+                                                class="mr-2"><span>French </span></a></li>
+                                </ul>
+                            </li>
+                            <!-- Log out-->
+                            <li class="nav-item"><a href="login.html" class="nav-link logout"> <span
+                                        class="d-none d-sm-inline-block">Logout</span><i class="fa fa-sign-out"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div class="breadcrumb-holder relative ">
+            <div class="container-fluid ">
+                <ul class="breadcrumb mb-4">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active">InformList </li>
+                </ul>
+            </div>
+        </div>
+        <section>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <h2>All Building Materials</h2>
+                            </div>
+                            <div class="col-lg-12">
+                                <mat-form-field class="example-full-width">
+                                    <input matInput #build placeholder="Add Building Material">
+                                </mat-form-field>
+                                <button (click)="addBuildMat(build.value)" mat-button>Add</button>
+                            </div>
+                            <table class="table table-striped">
+                                <tr>
+                                    <td>ID</td>
+                                    <td>Name</td>
+                                    <td>Delete</td>
+                                </tr>
+                                <tr *ngFor='let mat of buil_mats, let i=index'>
+                                    <td>{{i+1}}</td>
+                                    <td>{{mat.name}}</td>
+                                    <td><button mat-button (click)="deleteMaterial(mat._id)">Delete</button></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <br><br>
+                    <div class="col-lg-6">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <h2>All Appearances</h2>
+                            </div>
+                            <div class="col-lg-12">
+                                <mat-form-field class="example-full-width">
+                                    <input matInput #appear placeholder="Add Appaerance">
+                                </mat-form-field>
+                                <button (click)="addAppearance(appear.value)" mat-button>Add</button>
+                            </div>
+                            <table class="table table-striped">
+                                <tr>
+                                    <td>ID</td>
+                                    <td>Name</td>
+                                    <td>Delete</td>
+                                </tr>
+                                <tr *ngFor='let appear of appearances, let i=index'>
+                                    <td>{{i+1}}</td>
+                                    <td>{{appear.name}}</td>
+                                    <td><button mat-button (click)="deleteAppearance(appear._id)">Delete</button></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <br><br>
+                    <div class="col-lg-6">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <h2>All AnnounCements</h2>
+                            </div>
+                            <div class="col-lg-12">
+    
+                                <mat-form-field class="example-full-width">
+                                    <input matInput #annType placeholder="Add Announcement">
+                                </mat-form-field>
+    
+                                <button (click)="addAnnType(annType.value)" mat-button>Add</button>
+                            </div>
+    
+                            <table class="table table-striped">
+                                <tr>
+                                    <td>ID</td>
+                                    <td>Name</td>
+                                    <td>Delete</td>
+                                </tr>
+                                <tr *ngFor='let annType of annoucTypes, let i=index'>
+                                    <td>{{i+1}}</td>
+                                    <td>{{annType.name}}</td>
+                                    <td><button mat-button (click)="deleteAnnType(annType._id)">Delete</button></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <br><br>
+                </div>
+            </div>
+        </section>
+    </div>

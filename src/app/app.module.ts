@@ -24,6 +24,7 @@ import { AdminFooterComponent } from './admin/admin-footer/admin-footer.componen
 import { AdminHomeListComponent } from './admin/admin-home-list/admin-home-list.component';
 import { AdminUserListComponent } from './admin/admin-user-list/admin-user-list.component';
 import { AdminInformationComponent } from './admin/admin-information/admin-information.component';
+import { AdminInformHouseComponent } from './admin/admin-inform-house/admin-inform-house.component';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { AdminInformationComponent } from './admin/admin-information/admin-infor
     AdminFooterComponent,
     AdminHomeListComponent,
     AdminUserListComponent,
-    AdminInformationComponent
+    AdminInformationComponent,
+    AdminInformHouseComponent
   ],
   imports: [
     BrowserModule,

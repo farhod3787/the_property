@@ -19,7 +19,8 @@ const AnnouncementSchema = mongoose.Schema({
     one_m_kv: { type: Number },
     announcement_number: { type: Number },
     announcement_type_id: { type: String },
-    date: { type: Date }
+    date: { type: Date },
+    status: {type: Boolean}
 });
 
 module.exports = mongoose.model('announcement', AnnouncementSchema)

@@ -44,7 +44,8 @@ router.post('/create', multer({ storage: storage }).any('gallery'), (req, res) =
         announcement_number: req.body.announcement_number,
         announcement_type_id: req.body.announcement_type_id,
         date: req.body.date,
-        gallery: []
+        gallery: [],
+        status: req.body.status
     }
 
     if (req.files) {
@@ -65,7 +66,8 @@ router.post('/create', multer({ storage: storage }).any('gallery'), (req, res) =
 
 router.get('/', (req, res) => {
     Announcement.find().then((result) => {
-        res.status(200).json({ announcements: result })
+        res.status(200).json(result)
+        // res.status(200).json({ announcements: result })
     }).catch(e => {
         console.log(e);
         res.status(400).json()
@@ -103,6 +105,22 @@ router.delete('/:id', (req, res) => {
     }).catch(e => {
         console.log(e);
         res.status(400).json()
+    })
+})
+
+
+router.patch('/:id',  (request, response) =>{
+    var id = request.params.id;
+    var body = request.body;
+    body.status = true;
+    Announcement.findByIdAndUpdate(id, {$set: body}, {new: true} ).then( res =>{
+        if(res) {
+                response.status(200).json({message: "Yes"})
+        }
+        else {
+            response.status(400).json({message: "Now"})
+
+        }
     })
 })
 

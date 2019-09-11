@@ -59,53 +59,113 @@
     <section>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-12" >
-                <h2>All Regions</h2>
+                <div class="col-lg-6">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h2>All Regions</h2>
+                        </div>
+                        <div class="col-lg-12">
+                            <mat-form-field class="example-full-width">
+                                <input matInput #region placeholder="Add Region">
+                            </mat-form-field>
+                            <button (click)="addRegion(region.value)" mat-button>Add</button>
+                        </div>
+                        <table class="table table-striped">
+                            <tr>
+                                <td>ID</td>
+                                <td>Name</td>
+                                <td>Delete</td>
+                            </tr>
+                            <tr *ngFor='let region of regions, let i=index'>
+                                <td>{{i+1}}</td>
+                                <td>{{region.name}}</td>
+                                <td><button mat-button (click)="deleteRegion(region._id)">Delete</button></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <br><br>
+                <div class="col-lg-6">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h2>All House type</h2>
+                        </div>
+                        <div class="col-lg-12">
+                            <mat-form-field class="example-full-width">
+                                <input matInput #house placeholder="Add House type">
+                            </mat-form-field>
+                            <button (click)="addHousetype(house.value)" mat-button>Add</button>
+                        </div>
+                        <table class="table table-striped">
+                            <tr>
+                                <td>ID</td>
+                                <td>Name</td>
+                                <td>Delete</td>
+                            </tr>
+                            <tr *ngFor='let type of house_types, let i=index'>
+                                <td>{{i+1}}</td>
+                                <td>{{type.name}}</td>
+                                <td><button mat-button (click)="deleteType(type._id)">Delete</button></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <br><br>
+                <div class="col-lg-6">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h2>All Convenience</h2>
+                        </div>
+                        <div class="col-lg-12">
+
+                            <mat-form-field class="example-full-width">
+                                <input matInput #convenienc placeholder="Add Currency">
+                            </mat-form-field>
+
+                            <button (click)="addConvenience(convenienc.value)" mat-button>Add</button>
+                        </div>
+
+                        <table class="table table-striped">
+                            <tr>
+                                <td>ID</td>
+                                <td>Name</td>
+                                <td>Delete</td>
+                            </tr>
+                            <tr *ngFor='let convenc of conveniences, let i=index'>
+                                <td>{{i+1}}</td>
+                                <td>{{convenc.name}}</td>
+                                <td><button mat-button (click)="deleteConvenience(convenc._id)">Delete</button></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h2>All Currencys</h2>
+                        </div>
+                        <div class="col-lg-12">
+                            <mat-form-field class="example-full-width">
+                                <input matInput #currency placeholder="Add Currency">
+                            </mat-form-field>
+                            <button (click)="addCurrency(currency.value)" mat-button>Add</button>
+                        </div>
+                        <table class="table table-striped">
+                            <tr>
+                                <td>ID</td>
+                                <td>Name</td>
+                                <td>Delete</td>
+                            </tr>
+                            <tr *ngFor='let currency of currencys, let i=index'>
+                                <td>{{i+1}}</td>
+                                <td>{{currency.name}}</td>
+                                <td><button mat-button (click)="deleteCurrency(currency._id)">Delete</button></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <br><br>
             </div>
-                 
-                        <mat-form-field class="example-full-width">
-                          <input matInput #value placeholder="Add Region"  >
-                        </mat-form-field>
-
-                       <button (click)= "addRegion(value.value)" mat-button>Add</button>
-                      
-
-                <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-
-                            <!--- Note that these columns can be defined in any order.
-                                  The actual rendered columns are set as a property on the row definition" -->
-                          
-                            <!-- Position Column -->
-                            <ng-container matColumnDef="id">
-                              <th mat-header-cell *matHeaderCellDef> No. </th>
-                              <td mat-cell *matCellDef="let element, let i=index"> {{i+1}} </td>
-                            </ng-container>
-                          
-                            <!-- Name Column -->
-                            <ng-container matColumnDef="name">
-                              <th mat-header-cell *matHeaderCellDef> Name </th>
-                              <td mat-cell *matCellDef="let element"> {{element.name}} </td>
-                            </ng-container>
-                          
-                            <!-- Weight Column -->
-                            <ng-container matColumnDef="delete">
-                              <th mat-header-cell *matHeaderCellDef> Delete </th>
-                              <td mat-cell *matCellDef="let element"><button mat-button>Delete</button></td>
-                            </ng-container>
-                          
-                            
-                          
-                            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-                            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-                          </table>
-
-
-
-
-            </div>
-
-
         </div>
-
     </section>
 </div>

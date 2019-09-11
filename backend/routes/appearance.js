@@ -24,7 +24,8 @@ router.post('/create', (req, res) => {
 
 router.get('/', (req, res) => {
     Appearance.find().then((result) => {
-        res.status(200).json({ appearance: result })
+        res.status(200).json(result)
+        // res.status(200).json({ appearance: result })
     }).catch(e => {
         console.log(e);
         res.status(400).json()

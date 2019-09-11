@@ -3,6 +3,7 @@ import Swal from 'sweetalert2'
 
 import {MatTableDataSource} from '@angular/material/table';
 import { MatPaginator, MatSort } from '@angular/material';
+import { AnnouncService } from 'src/app/shared/service/annouenceService';
 
 @Component({
   selector: 'app-admin-home-list',
@@ -12,16 +13,25 @@ import { MatPaginator, MatSort } from '@angular/material';
 export class AdminHomeListComponent implements OnInit {
 
 
-  displayedColumns: string[] = [ 'elon_rate', 'user_name',  'area',  'elon_type', 'date', 'price', 'about'];
+  displayedColumns: string[] = [ 'elon_rate', 'user_name',  'area',  'elon_type', 'date', 'price', 'status','about'];
   dataSource;
 
 
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
   @ViewChild(MatSort, {static: true}) sort: MatSort;
 
-  constructor() { }
+  constructor( private annucService: AnnouncService) {
+    this.getAnnounc()
+   }
 
   ngOnInit() {
+  }
+  getAnnounc() {
+    this.annucService.getAnn().subscribe( res =>{
+      this.dataSource = new MatTableDataSource(res.json());
+      this.dataSource.paginator = this.paginator;
+      this.dataSource.sort = this.sort;
+    })
   }
 
   applyFilter(filterValue: string) {
