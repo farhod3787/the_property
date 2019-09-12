@@ -27,5 +27,9 @@ import { Http } from '@angular/http';
         return this.http.patch(this.url + '/' + id, body)
     }
 
+    get(id) {
+      return this.http.get(this.url + '/view/' + id)
+    }
+
 
 }
