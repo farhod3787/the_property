@@ -1,0 +1,34 @@
+<div class="page login-page">
+    <div class="container">
+        <div class="form-outer text-center d-flex align-items-center">
+            <div class="form-inner" style="margin: auto">
+                <div class="logo text-uppercase"><span>Admin </span><strong class="text-primary"> Registration </strong></div>
+                <form [formGroup]="form" class="text-left form-validate">
+                    <div class="form-group-material">
+                        <input placeholder="Username" formControlName="username" id="register-username" type="text" name="registerUsername" required data-msg="Please enter your username" class="input-material">
+                        <!-- <label for="register-username" class="label-material">Username</label> -->
+                    </div>
+                    <div class="form-group-material">
+                        <input placeholder="Login" formControlName="login" id="register-login" type="text" name="registerLogin" required data-msg="Please enter your login" class="input-material">
+                        <!-- <label for="register-login" class="label-material">Login      </label> -->
+                    </div>
+                    <div class="form-group-material">
+                        <input placeholder="Password" formControlName="password" id="register-password" type="password" name="registerPassword" required data-msg="Please enter your password" class="input-material">
+                        <!-- <label for="register-password" class="label-material">Password        </label> -->
+                    </div>
+                    <div class="form-group terms-conditions text-center">
+                        <input id="register-agree" #checkboxx name="registerAgree" type="checkbox" required data-msg="Your agreement is required" class="form-control-custom">
+                        <label for="register-agree">I agree with the terms and policy</label>
+                    </div>
+                    <div class="form-group text-center">
+                        <input (click)="onSubmit(checkboxx)" id="register" type="submit" value="Register" class="btn btn-primary">
+                    </div>
+                </form><small>Already have an account? </small><a routerLink="/admin/login" class="signup">Login</a>
+            </div>
+            <div class="copyrights text-center">
+                <p>Design by <a href="https://bootstrapious.com" class="external">Bootstrapious</a></p>
+                <!-- Please do not remove the backlink to us unless you support further theme's development at https://bootstrapious.com/donate. It is part of the license conditions. Thank you for understanding :)-->
+            </div>
+        </div>
+    </div>
+</div>

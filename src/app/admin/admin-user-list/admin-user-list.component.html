@@ -1,125 +1,123 @@
 <div class="page">
-        <header class="header p-0" style="position: relative;">
-            <nav class="navbar">
-                <div class="container-fluid">
-                    <div class="navbar-holder d-flex align-items-center justify-content-between">
-                        <div class="navbar-header">
-                            <a id="toggle-btn" href="#" class="menu-btn">
-                                <i class="fa fa-bars "> </i></a><a href="index.html" class="navbar-brand">
-                                <div class="brand-text d-none d-md-inline-block"><span>Home</span><strong
-                                        class="text-primary">List</strong></div>
-                            </a></div>
-                        <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
-                            <!-- Notifications dropdown-->
-                            <li class="nav-item dropdown"> <a id="notifications" rel="nofollow" data-target="#" href="#"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link"><i
-                                        class="fa fa-bell"></i><span class="badge badge-warning">12</span></a>
-                                <ul aria-labelledby="notifications" class="dropdown-menu">
-                                    <li><a rel="nofollow" href="#" class="dropdown-item">
-                                            <div class="notification d-flex justify-content-between">
-                                                <div class="notification-content"><i class="fa fa-envelope"></i>You have 6
-                                                    new messages </div>
-                                                <div class="notification-time"><small>4 minutes ago</small></div>
-                                            </div>
-                                        </a></li>
-                                </ul>
-                            </li>
-                            <!-- Languages dropdown    -->
-                            <li class="nav-item dropdown"><a id="languages" rel="nofollow" data-target="#" href="#"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                                    class="nav-link language dropdown-toggle">
-                                    <img src="assets/admin/img/flags/16/GB.png" alt="English"><span
-                                        class="d-none d-sm-inline-block">English</span></a>
-                                <ul aria-labelledby="languages" class="dropdown-menu">
-                                    <li><a rel="nofollow" href="#" class="dropdown-item"> <img
-                                                src="assets/admin/img/flags/16/DE.png" alt="English"
-                                                class="mr-2"><span>German</span></a></li>
-                                    <li><a rel="nofollow" href="#" class="dropdown-item"> <img
-                                                src="assets/admin/img/flags/16/FR.png" alt="English"
-                                                class="mr-2"><span>French </span></a></li>
-                                </ul>
-                            </li>
-                            <!-- Log out-->
-                            <li class="nav-item"><a href="login.html" class="nav-link logout"> <span
-                                        class="d-none d-sm-inline-block">Logout</span><i class="fa fa-sign-out"></i></a>
-                            </li>
-                        </ul>
+    <header class="header p-0" style="position: relative;">
+        <nav class="navbar">
+            <div class="container-fluid">
+                <div class="navbar-holder d-flex align-items-center justify-content-between">
+                    <div class="navbar-header">
+                        <a id="toggle-btn" href="#" class="menu-btn">
+                            <i class="fa fa-bars "> </i></a>
+                        <a href="index.html" class="navbar-brand">
+                            <div class="brand-text d-none d-md-inline-block"><span>Home</span><strong class="text-primary">List</strong></div>
+                        </a>
                     </div>
+                    <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
+                        <!-- Notifications dropdown-->
+                        <li class="nav-item dropdown"> <a id="notifications" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link"><i
+                                        class="fa fa-bell"></i><span class="badge badge-warning">12</span></a>
+                            <ul aria-labelledby="notifications" class="dropdown-menu">
+                                <li>
+                                    <a rel="nofollow" href="#" class="dropdown-item">
+                                        <div class="notification d-flex justify-content-between">
+                                            <div class="notification-content"><i class="fa fa-envelope"></i>You have 6 new messages </div>
+                                            <div class="notification-time"><small>4 minutes ago</small></div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- Languages dropdown    -->
+                        <li class="nav-item dropdown">
+                            <a id="languages" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link language dropdown-toggle">
+                                <img src="assets/admin/img/flags/16/GB.png" alt="English"><span class="d-none d-sm-inline-block">English</span></a>
+                            <ul aria-labelledby="languages" class="dropdown-menu">
+                                <li>
+                                    <a rel="nofollow" href="#" class="dropdown-item"> <img src="assets/admin/img/flags/16/DE.png" alt="English" class="mr-2"><span>German</span></a>
+                                </li>
+                                <li>
+                                    <a rel="nofollow" href="#" class="dropdown-item"> <img src="assets/admin/img/flags/16/FR.png" alt="English" class="mr-2"><span>French </span></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a routerLink="/admin/login" class="nav-link logout"> <span class="d-none d-sm-inline-block">Logout</span><i class="fa fa-sign-out"></i></a>
+                        </li>
+                    </ul>
                 </div>
-            </nav>
-        </header>
-        <div class="breadcrumb-holder relative ">
-            <div class="container-fluid ">
-                <ul class="breadcrumb mb-4">
-                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                    <li class="breadcrumb-item active">HomeList </li>
-                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="breadcrumb-holder relative ">
+        <div class="container-fluid ">
+            <ul class="breadcrumb mb-4">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item active">HomeList </li>
+            </ul>
+        </div>
+    </div>
+    <section>
+        <div class="container-fluid">
+            <div class="row">
+
+                <mat-form-field style="widows: 40%; text-align: center">
+                    <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Qidirish...">
+                </mat-form-field>
+
+
+
+                <table mat-table [dataSource]="dataSource" matSort style="width: 100%">
+
+                    <!-- ID Column -->
+                    <ng-container matColumnDef="id">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> <b>ID</b> </th>
+                        <td mat-cell *matCellDef="let row, let i=index ">{{i+1}} </td>
+                    </ng-container>
+
+                    <!-- Progress Column -->
+                    <ng-container matColumnDef="name">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> <b>User Name : </b> </th>
+                        <td mat-cell *matCellDef="let row">{{row.name}}</td>
+                    </ng-container>
+
+                    <!-- Name Column -->
+                    <ng-container matColumnDef="email">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> <b> Email : </b></th>
+                        <td mat-cell *matCellDef="let row"> {{row.email}}
+                        </td>
+                    </ng-container>
+
+                    <!-- Color Column -->
+                    <ng-container matColumnDef="number">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> <b> Phone Number : </b></th>
+                        <td mat-cell *matCellDef="let row"> {{row.number}} </td>
+                    </ng-container>
+                    <!-- "./node_modules/chart.js/dist/Chart.js", -->
+
+                    <ng-container matColumnDef="avatar">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header><b>Avatar : </b></th>
+                        <td mat-cell *matCellDef="let row">
+                            <img width="65" src="http://localhost:3000/photos/{{row.avatar}}" alt="">
+                        </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="delete">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> <b> Delete : </b> </th>
+                        <td mat-cell *matCellDef="let row">
+                            <button mat-button (click)="delete(row._id)">Delete</button>
+                        </td>
+                    </ng-container>
+
+
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;">
+                    </tr>
+                </table>
+
+
+
+
+
+
             </div>
         </div>
-        <section>
-            <div class="container-fluid">
-                <div class="row">
-    
-                    <mat-form-field style="widows: 40%; text-align: center">
-                            <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Qidirish...">
-                        </mat-form-field>
-    
-    
-    
-                    <table mat-table [dataSource]="dataSource" matSort style="width: 100%">
-    
-                            <!-- ID Column -->
-                            <ng-container matColumnDef="id">
-                                <th mat-header-cell *matHeaderCellDef mat-sort-header> <b>ID</b> </th>
-                                <td mat-cell *matCellDef="let row, let i=index ">{{i+1}} </td>
-                            </ng-container>
-        
-                            <!-- Progress Column -->
-                            <ng-container matColumnDef="name">
-                                <th mat-header-cell *matHeaderCellDef mat-sort-header> <b>User Name : </b> </th>
-                                <td mat-cell *matCellDef="let row">{{row.name}}</td>
-                            </ng-container>
-        
-                            <!-- Name Column -->
-                            <ng-container matColumnDef="email">
-                                <th mat-header-cell *matHeaderCellDef mat-sort-header> <b> Email : </b></th>
-                                <td mat-cell *matCellDef="let row"> {{row.email}}                      
-                                </td>
-                            </ng-container>
-        
-                            <!-- Color Column -->
-                            <ng-container matColumnDef="number">
-                                <th mat-header-cell *matHeaderCellDef mat-sort-header> <b> Phone Number : </b></th>
-                                <td mat-cell *matCellDef="let row"> {{row.number}} </td>
-                            </ng-container>
-                            <!-- "./node_modules/chart.js/dist/Chart.js", -->
-        
-                            <ng-container matColumnDef="avatar">
-                                <th mat-header-cell *matHeaderCellDef mat-sort-header><b>Avatar : </b></th>
-                                <td mat-cell *matCellDef="let row"> 
-                                    <img width="65" src="http://localhost:3000/photos/{{row.avatar}}" alt="">
-                                    </td>
-                            </ng-container>
-        
-                            <ng-container matColumnDef="delete">
-                                <th mat-header-cell *matHeaderCellDef mat-sort-header> <b> Delete : </b> </th>
-                                <td mat-cell *matCellDef="let row"> 
-                                        <button mat-button (click)="delete(row._id)">Delete</button>
-                                </td>
-                            </ng-container>
-        
-        
-                            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-                            <tr mat-row *matRowDef="let row; columns: displayedColumns;">
-                            </tr>
-                        </table>
-    
-    
-    
-    
-    
-    
-                </div>
-            </div>
-        </section>
-    </div>
+    </section>
+</div>

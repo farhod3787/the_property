@@ -5,43 +5,42 @@
                 <div class="navbar-holder d-flex align-items-center justify-content-between">
                     <div class="navbar-header">
                         <a id="toggle-btn" href="#" class="menu-btn">
-                            <i class="fa fa-bars "> </i></a><a href="index.html" class="navbar-brand">
-                            <div class="brand-text d-none d-md-inline-block"><span>Home</span><strong
-                                    class="text-primary">List</strong></div>
-                        </a></div>
+                            <i class="fa fa-bars "> </i></a>
+                        <a href="index.html" class="navbar-brand">
+                            <div class="brand-text d-none d-md-inline-block"><span>Home</span><strong class="text-primary">List</strong></div>
+                        </a>
+                    </div>
                     <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
                         <!-- Notifications dropdown-->
-                        <li class="nav-item dropdown"> <a id="notifications" rel="nofollow" data-target="#" href="#"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link"><i
+                        <li class="nav-item dropdown"> <a id="notifications" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link"><i
                                     class="fa fa-bell"></i><span class="badge badge-warning">12</span></a>
                             <ul aria-labelledby="notifications" class="dropdown-menu">
-                                <li><a rel="nofollow" href="#" class="dropdown-item">
+                                <li>
+                                    <a rel="nofollow" href="#" class="dropdown-item">
                                         <div class="notification d-flex justify-content-between">
-                                            <div class="notification-content"><i class="fa fa-envelope"></i>You have 6
-                                                new messages </div>
+                                            <div class="notification-content"><i class="fa fa-envelope"></i>You have 6 new messages </div>
                                             <div class="notification-time"><small>4 minutes ago</small></div>
                                         </div>
-                                    </a></li>
+                                    </a>
+                                </li>
                             </ul>
                         </li>
                         <!-- Languages dropdown    -->
-                        <li class="nav-item dropdown"><a id="languages" rel="nofollow" data-target="#" href="#"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                                class="nav-link language dropdown-toggle">
-                                <img src="assets/admin/img/flags/16/GB.png" alt="English"><span
-                                    class="d-none d-sm-inline-block">English</span></a>
+                        <li class="nav-item dropdown">
+                            <a id="languages" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link language dropdown-toggle">
+                                <img src="assets/admin/img/flags/16/GB.png" alt="English"><span class="d-none d-sm-inline-block">English</span></a>
                             <ul aria-labelledby="languages" class="dropdown-menu">
-                                <li><a rel="nofollow" href="#" class="dropdown-item"> <img
-                                            src="assets/admin/img/flags/16/DE.png" alt="English"
-                                            class="mr-2"><span>German</span></a></li>
-                                <li><a rel="nofollow" href="#" class="dropdown-item"> <img
-                                            src="assets/admin/img/flags/16/FR.png" alt="English"
-                                            class="mr-2"><span>French </span></a></li>
+                                <li>
+                                    <a rel="nofollow" href="#" class="dropdown-item"> <img src="assets/admin/img/flags/16/DE.png" alt="English" class="mr-2"><span>German</span></a>
+                                </li>
+                                <li>
+                                    <a rel="nofollow" href="#" class="dropdown-item"> <img src="assets/admin/img/flags/16/FR.png" alt="English" class="mr-2"><span>French </span></a>
+                                </li>
                             </ul>
                         </li>
                         <!-- Log out-->
-                        <li class="nav-item"><a href="login.html" class="nav-link logout"> <span
-                                    class="d-none d-sm-inline-block">Logout</span><i class="fa fa-sign-out"></i></a>
+                        <li class="nav-item">
+                            <a routerLink="/admin/login" class="nav-link logout"> <span class="d-none d-sm-inline-block">Logout</span><i class="fa fa-sign-out"></i></a>
                         </li>
                     </ul>
                 </div>
@@ -61,146 +60,145 @@
             <div class="row">
 
                 <mat-form-field style="widows: 40%; text-align: center">
-                        <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Qidirish...">
-                    </mat-form-field>
+                    <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Qidirish...">
+                </mat-form-field>
 
 
 
                 <table mat-table [dataSource]="dataSource" matSort style="width: 100%">
 
-                        <!-- ID Column -->
-                        <ng-container matColumnDef="elon_rate">
-                            <th mat-header-cell *matHeaderCellDef mat-sort-header> <b>E'lon raqami</b> </th>
-                            <td mat-cell *matCellDef="let row "> </td>
-                        </ng-container>
-    
-                        <!-- Progress Column -->
-                        <ng-container matColumnDef="user_name">
-                            <th mat-header-cell *matHeaderCellDef mat-sort-header> <b>User Name : </b> </th>
-                            <td mat-cell *matCellDef="let row">{{row.user_id}} </td>
-                        </ng-container>
-    
-                        <!-- Name Column -->
-                        <ng-container matColumnDef="area">
-                            <th mat-header-cell *matHeaderCellDef mat-sort-header> <b> Maydoni : </b></th>
-                            <td mat-cell *matCellDef="let row"> {{row.area}}                              
-                            </td>
-                        </ng-container>
-    
-                        <!-- Color Column -->
-                        <ng-container matColumnDef="elon_type">
-                            <th mat-header-cell *matHeaderCellDef mat-sort-header> <b> E'lon turi : </b></th>
-                            <td mat-cell *matCellDef="let row"> {{row.announcement_type_id}} </td>
-                        </ng-container>
-                        <!-- "./node_modules/chart.js/dist/Chart.js", -->
-    
-                        <ng-container matColumnDef="date">
-                            <th mat-header-cell *matHeaderCellDef mat-sort-header><b> Vaqt : </b></th>
-                            <td mat-cell *matCellDef="let row"> {{row.date}}  </td>
-                        </ng-container>
-    
-                        <ng-container matColumnDef="price">
-                            <th mat-header-cell *matHeaderCellDef mat-sort-header><b> Narxi :</b> </th>
-                            <td mat-cell *matCellDef="let row">{{row.summ}}  </td>
-                        </ng-container>
+                    <!-- ID Column -->
+                    <ng-container matColumnDef="elon_rate">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> <b>E'lon raqami</b> </th>
+                        <td mat-cell *matCellDef="let row "> </td>
+                    </ng-container>
 
-                        <ng-container matColumnDef="status">
-                                <th mat-header-cell *matHeaderCellDef mat-sort-header><b> Status :</b> </th>
-                                <td mat-cell *matCellDef="let row"> {{row.status}}  </td>
-                            </ng-container>
-    
-                        <ng-container matColumnDef="about">
-                            <th mat-header-cell *matHeaderCellDef mat-sort-header> <b> Umumiy : </b> </th>
-                            <td mat-cell *matCellDef="let row"> 
-                                    <button mat-button (click)="about(row._id)"  data-toggle="modal" data-target="#modalYT" >Umumiy</button>
-                            </td>
-                        </ng-container>
-    
-    
-                        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-                        <tr mat-row *matRowDef="let row; columns: displayedColumns;">
-                        </tr>
-                    </table>
-                    <!--                 MODAL      -->
-                    <div>  
-                        <style>
-                          .modal-content-about{
+                    <!-- Progress Column -->
+                    <ng-container matColumnDef="user_name">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> <b>User Name : </b> </th>
+                        <td mat-cell *matCellDef="let row">{{row.user_id}} </td>
+                    </ng-container>
+
+                    <!-- Name Column -->
+                    <ng-container matColumnDef="area">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> <b> Maydoni : </b></th>
+                        <td mat-cell *matCellDef="let row"> {{row.area}}
+                        </td>
+                    </ng-container>
+
+                    <!-- Color Column -->
+                    <ng-container matColumnDef="elon_type">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> <b> E'lon turi : </b></th>
+                        <td mat-cell *matCellDef="let row"> {{row.announcement_type_id}} </td>
+                    </ng-container>
+                    <!-- "./node_modules/chart.js/dist/Chart.js", -->
+
+                    <ng-container matColumnDef="date">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header><b> Vaqt : </b></th>
+                        <td mat-cell *matCellDef="let row"> {{row.date}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="price">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header><b> Narxi :</b> </th>
+                        <td mat-cell *matCellDef="let row">{{row.summ}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="status">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header><b> Status :</b> </th>
+                        <td mat-cell *matCellDef="let row"> {{row.status}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="about">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> <b> Umumiy : </b> </th>
+                        <td mat-cell *matCellDef="let row">
+                            <button mat-button (click)="about(row._id)" data-toggle="modal" data-target="#modalYT">Umumiy</button>
+                        </td>
+                    </ng-container>
+
+
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;">
+                    </tr>
+                </table>
+                <!--                 MODAL      -->
+                <div>
+                    <style>
+                        .modal-content-about {
                             font-size: 16px;
-                          }
-                          .modal-content-about span{
+                        }
+                        
+                        .modal-content-about span {
                             font-weight: bold;
                             padding-right: 15px;
                             font-size: 16px;
-                          }
-                          .image-admin{
-                              width: 100%;
-                              min-height: 200px;;
-                          }
-                        </style>
-                        <!-- Button trigger modal-->
-                        <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalYT">Launch modal</button> -->
-              
-                        <!--Modal: modalYT-->
-                        <div class="modal fade" id="modalYT" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-                        aria-hidden="true">
+                        }
+                        
+                        .image-admin {
+                            width: 100%;
+                            min-height: 200px;
+                            ;
+                        }
+                    </style>
+                    <!-- Button trigger modal-->
+                    <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalYT">Launch modal</button> -->
+
+                    <!--Modal: modalYT-->
+                    <div class="modal fade" id="modalYT" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                         <div class="modal-dialog modal-lg" role="document">
-              
-                          <!--Content-->
-                          <div class="modal-content modal-content-about">
-                            <div class="modal-header bg-dark">
-                              <h2 class="p-0 m-0 text-white">New home</h2>
-                            </div>
-                            <!--Body-->
-                            <div class="modal-body mb-0 p-0">
-              
-                              <div class="row px-3">
-                                <div class="col-md-3 col-sm-6 my-3" *ngFor = "let avatar of home.gallery" >
-                                    <a href="http://localhost:3000/photos/{{avatar.url}}" target="_blank">
-                                  <img src="http://localhost:3000/photos/{{avatar.url}}" class="img-fluid image-admin" alt="">
-                                </a>
-                                </div>  
-              
-                              </div>
-                              <div class="row p-4">
-                                <div class="col-12">
-                                  <!-- <h2>{{home.user_id}}</h2> -->
-                                  <div><span >Manzil:</span>{{home.region_id}} {{home.location}} </div>
-                                  <!-- <div><span>Tel:</span> +123456789</div> -->
-                                  <!-- <div><span>Email:</span>kvartirabor@gmail.com</div> -->
-                                  <div><span>Elon beruvchi:</span>{{home.user_id}}</div>
-                                  <div><span>Qavati:</span>{{home.floor}}</div>
-                                  <div><span>Umumiy qavat:</span>{{home.general_floor}}</div>
-                                  <div><span>Umumiy maydoni:</span>{{home.area}}</div>
-                                  <div><span>Yashash maydoni:</span>{{home.live_area}}</div>
-                                  <div><span>Xonalar soni:</span>{{home.rooms_number}}</div>
-                                  <div><span>Xonalar ajratilganmi:</span>{{home.room_allocation}}</div>
-                                  <div><span>Xolati:</span>{{home.appearance_id}}</div>
-                                  <div><span>Bino materiali:</span>{{home.building_material_id}}</div>
-                                  <div><span>Narxi:</span>{{home.summ}}  {{home.currency_id}}</div>
-                                  <div><span>1 m.kv uchun narx:</span>{{home.one_m_kv}}</div>
-                                  <div><span>Manzil:</span>{{home.location}}</div>
-                                  <div><span>Izox:</span>{{home.classification}}</div>
-                                  <div><span>E'lon raqami:</span>{{home.announcement_number }}</div>
-                                  <div><span>E'lon turi:</span>{{home.announcement_type_id}}</div>
-                                  <div><span>Date:</span>{{home.date}}</div>
+
+                            <!--Content-->
+                            <div class="modal-content modal-content-about">
+                                <div class="modal-header bg-dark">
+                                    <h2 class="p-0 m-0 text-white">New home</h2>
                                 </div>
-                              </div>
+                                <!--Body-->
+                                <div class="modal-body mb-0 p-0">
+
+                                    <div class="row px-3">
+                                        <div class="col-md-3 col-sm-6 my-3" *ngFor="let avatar of home.gallery">
+                                            <a href="http://localhost:3000/photos/{{avatar.url}}" target="_blank">
+                                                <img src="http://localhost:3000/photos/{{avatar.url}}" class="img-fluid image-admin" alt="">
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                    <div class="row p-4">
+                                        <div class="col-12">
+                                            <!-- <h2>{{home.user_id}}</h2> -->
+                                            <div><span>Manzil:</span>{{home.region_id}} {{home.location}} </div>
+                                            <!-- <div><span>Tel:</span> +123456789</div> -->
+                                            <!-- <div><span>Email:</span>kvartirabor@gmail.com</div> -->
+                                            <div><span>Elon beruvchi:</span>{{home.user_id}}</div>
+                                            <div><span>Qavati:</span>{{home.floor}}</div>
+                                            <div><span>Umumiy qavat:</span>{{home.general_floor}}</div>
+                                            <div><span>Umumiy maydoni:</span>{{home.area}}</div>
+                                            <div><span>Yashash maydoni:</span>{{home.live_area}}</div>
+                                            <div><span>Xonalar soni:</span>{{home.rooms_number}}</div>
+                                            <div><span>Xonalar ajratilganmi:</span>{{home.room_allocation}}</div>
+                                            <div><span>Xolati:</span>{{home.appearance_id}}</div>
+                                            <div><span>Bino materiali:</span>{{home.building_material_id}}</div>
+                                            <div><span>Narxi:</span>{{home.summ}} {{home.currency_id}}</div>
+                                            <div><span>1 m.kv uchun narx:</span>{{home.one_m_kv}}</div>
+                                            <div><span>Manzil:</span>{{home.location}}</div>
+                                            <div><span>Izox:</span>{{home.classification}}</div>
+                                            <div><span>E'lon raqami:</span>{{home.announcement_number }}</div>
+                                            <div><span>E'lon turi:</span>{{home.announcement_type_id}}</div>
+                                            <div><span>Date:</span>{{home.date}}</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--Footer-->
+                                <div class="modal-footer justify-content-center flex-column flex-md-row">
+                                    <!-- <span class="mr-4">Spread the word!</span> -->
+                                    <button type="button" class="btn btn-warning   btn-md ml-4" data-dismiss="modal">Cancel</button>
+                                    <button type="button" class="btn btn-warning   btn-md ml-4" data-dismiss="modal" (click)="delete(home._id)">Delete</button>
+                                    <button type="button" class="btn btn-primary  border-0 btn-md ml-4" data-dismiss="modal" (click)="update(home._id, home)">Save</button>
+                                </div>
                             </div>
-              
-                            <!--Footer-->
-                            <div class="modal-footer justify-content-center flex-column flex-md-row">
-                              <!-- <span class="mr-4">Spread the word!</span> -->
-                              <button type="button" class="btn btn-warning   btn-md ml-4"
-                              data-dismiss="modal">Cancel</button>   
-                              <button type="button" class="btn btn-warning   btn-md ml-4"
-                              data-dismiss="modal" (click)="delete(home._id)">Delete</button>             
-                              <button type="button" class="btn btn-primary  border-0 btn-md ml-4"
-                              data-dismiss="modal" (click)="update(home._id, home)">Save</button>
-                            </div>
-                          </div>
                         </div>
-                      </div>
                     </div>
+                </div>
             </div>
         </div>
     </section>

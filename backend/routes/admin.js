@@ -12,6 +12,7 @@ router.post('/post', function(req, res, next) {
 
             var body = req.body;
             let user = {
+                username: body.username,
                 login: body.login,
                 password: await Admin.hashofPassword(body.password),
             }
@@ -55,10 +56,10 @@ router.post('/sign', async function(request, response) {
     var body = request.body;
     var data = {}
     var users = await Admin.find();
-    // console.log(users);
+    
     var obj = Admin.verifyUser(users, body);
-
-    if (obj.isUser) {
+ 
+    if (obj.isAdmin) {
         data.token = obj.token;
         data.isAdmin = obj.isAdmin;
         response.status(200).json(data)

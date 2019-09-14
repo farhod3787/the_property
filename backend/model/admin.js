@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 var jwt = require('jsonwebtoken');
 
 const AdminSchema = mongoose.Schema({
+    username: { type: String },
     login: { type: String },
     password: { type: String }
 });
@@ -39,9 +40,9 @@ AdminSchema.statics.verifyUser = function(users, body) {
             if (user.login == body.login && distoken.password == body.password) {
 
                 object.token = jwt.sign({ login: user.login, password: user.password }, 'pro')
-                if (user == users[0]) {
+                // if (user == users[0]) {
                     object.isAdmin = true;
-                }
+                // }
             }
         } else {
             console.log("Distoken Undefined")

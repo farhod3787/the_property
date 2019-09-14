@@ -5,13 +5,15 @@ import { HttpModule } from '@angular/http'
 import {
   MatInputModule,
   MatFormFieldModule,
-  MatButtonModule, 
+  MatButtonModule,
+  MatCardModule, 
   MatCheckboxModule,
   MatPaginatorModule,
   MatTableModule,
   MatSortModule,
   MatSelectModule
 } from '@angular/material';
+
 
 
 
@@ -25,6 +27,10 @@ import { AdminHomeListComponent } from './admin/admin-home-list/admin-home-list.
 import { AdminUserListComponent } from './admin/admin-user-list/admin-user-list.component';
 import { AdminInformationComponent } from './admin/admin-information/admin-information.component';
 import { AdminInformHouseComponent } from './admin/admin-inform-house/admin-inform-house.component';
+import { AdminLoginComponent } from './admin/admin-login/admin-login.component';
+import { AdminRegisterComponent } from './admin/admin-register/admin-register.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { AdminCreateComponent } from './admin/admin-create/admin-create.component';
 
 
 @NgModule({
@@ -36,16 +42,22 @@ import { AdminInformHouseComponent } from './admin/admin-inform-house/admin-info
     AdminHomeListComponent,
     AdminUserListComponent,
     AdminInformationComponent,
-    AdminInformHouseComponent
+    AdminInformHouseComponent,
+    AdminLoginComponent,
+    AdminRegisterComponent,
+    AdminCreateComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpModule,
+    FormsModule,
+    ReactiveFormsModule,
     BrowserAnimationsModule,
     MatInputModule,
     MatFormFieldModule,
-    MatButtonModule, 
+    MatButtonModule,
+    MatCardModule, 
     MatCheckboxModule,
     MatPaginatorModule,
     MatTableModule,
