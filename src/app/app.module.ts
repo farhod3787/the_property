@@ -1,6 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http'
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+
+
+import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import {NgxMaskModule} from 'ngx-mask'
 
 import {
   MatInputModule,
@@ -32,6 +38,9 @@ import { AdminRegisterComponent } from './admin/admin-register/admin-register.co
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { AdminCreateComponent } from './admin/admin-create/admin-create.component';
 
+export function HttpLoaderFactory(httpClient: HttpClient) {
+  return new TranslateHttpLoader(httpClient);
+}
 
 @NgModule({
   declarations: [
@@ -62,7 +71,16 @@ import { AdminCreateComponent } from './admin/admin-create/admin-create.componen
     MatPaginatorModule,
     MatTableModule,
     MatSortModule,
-    MatSelectModule
+    MatSelectModule,
+    HttpClientModule,
+    NgxMaskModule.forRoot(),
+    TranslateModule.forRoot({
+      loader: {
+          provide: TranslateLoader,
+          useFactory: HttpLoaderFactory,
+          deps: [HttpClient]
+      }
+  }) 
   ],
   providers: [],
   bootstrap: [AppComponent]

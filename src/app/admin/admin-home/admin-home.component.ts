@@ -3,12 +3,18 @@ import { Router } from '@angular/router';
 import { UserService } from 'src/app/shared/service/userService';
 import { AnnouncService } from 'src/app/shared/service/annouenceService';
 
+import { TranslateService } from '@ngx-translate/core';
+
+
 @Component({
   selector: 'app-admin-home',
   templateUrl: './admin-home.component.html',
   styleUrls: ['./admin-home.component.css']
 })
 export class AdminHomeComponent implements OnInit {
+
+
+  langs = [ 'RUS', 'ENG'];
 
   users = [];
   announcs = []
@@ -18,11 +24,18 @@ export class AdminHomeComponent implements OnInit {
   constructor(
     private router: Router,
     private userService: UserService,
-    private announcService : AnnouncService
+    private announcService : AnnouncService,
+    public translate: TranslateService
     
     ) { 
         this.allUsers();
         this.allAnnouncs();
+
+        translate.addLangs(['en', 'ru', 'uz']);
+        translate.setDefaultLang('RUS');
+        const browserLang = translate.getBrowserLang();
+        translate.use(browserLang.match(/en|ru/) ? browserLang : 'en');
+        translate.getLangs();
     }
 
     allUsers() {

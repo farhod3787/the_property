@@ -1,0 +1,47 @@
+﻿
+{
+  "NAVBAR": 
+  {
+   "LOGOUT" : "Log Out",
+   "SIGN" : "Sign",
+   "PROFIL": "My Profil",
+   "TAQQOSLASH": "Comparison",
+   "SAVAT": "Shopping",
+   "REGISTR" : "Registration",
+   "KAFOLAT": "Guarantees and certificates",
+   "NEWS": "News",
+   "TOLOV": "Payment and Eco-pharma services",
+   "SAVOL-JAVOB": "Question and answer",
+   "CONTACT": "Contact",
+   "MALUMOT": " General information"
+} ,
+"SIDENAV" :
+{
+  "KATEGORIYA" : "Category",
+  "Dorilar": "Pharms",
+  "ONA-BOLA": "For mothers and children",
+  "TIBBIY-ASBOBLAR": "Medical Instruments",
+  "OZUQALAR" : "Nutrition",
+  "GOZALLIK": "Beauty and Health",
+  "GIYOHLAR": "Herbs",
+  "GIGIYENA": "Hygiene products",
+  "KATALOG": "Catalog of drugs"
+},
+"HOME" : 
+{
+  "SONI": "sum  1 pc",
+  "BUTTON": "Add to cart",
+  "NOL": "Not for sale",
+  "TITLE" : "Best Offers",
+  "OLD": "Everything"
+}
+
+
+  
+ 
+
+
+}
+
+
+
